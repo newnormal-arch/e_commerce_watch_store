@@ -1,3 +1,4 @@
+import 'package:e_commerce_watch_store/screens/product_page.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 
@@ -103,63 +104,72 @@ class HomePage extends StatelessWidget {
                                 padding: const EdgeInsets.only(left: 5.0),
                                 child: Row(
                                   children: [
-                                    SizedBox(
-                                      height: 225,
-                                      width: 157,
-                                      child: Card(
-                                        elevation: 1,
-                                        shadowColor: const Color(0xff9095A6),
-                                        color: Colors.white,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(14),
-                                        ),
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Container(
-                                                height: 101,
-                                                width: 141,
-                                                decoration: BoxDecoration(
-                                                  color:
-                                                      const Color(0xffFFC8B7),
-                                                  borderRadius:
-                                                      BorderRadius.circular(14),
+                                    GestureDetector(
+                                      onTap: () => Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const ProductsPage()),
+                                      ),
+                                      child: SizedBox(
+                                        height: 225,
+                                        width: 157,
+                                        child: Card(
+                                          elevation: 1,
+                                          shadowColor: const Color(0xff9095A6),
+                                          color: Colors.white,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(14),
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Container(
+                                                  height: 101,
+                                                  width: 141,
+                                                  decoration: BoxDecoration(
+                                                    color:
+                                                        const Color(0xffFFC8B7),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            14),
+                                                  ),
+                                                  child: Image.asset(
+                                                      'assets/images/Watch.png'),
                                                 ),
-                                                child: Image.asset(
-                                                    'assets/images/Watch.png'),
-                                              ),
-                                              const SizedBox(height: 16),
-                                              const Text(
-                                                'Apple Watch',
-                                                style: TextStyle(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.w600,
-                                                  color: Color(0xff1B153D),
+                                                const SizedBox(height: 16),
+                                                const Text(
+                                                  'Apple Watch',
+                                                  style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w600,
+                                                    color: Color(0xff1B153D),
+                                                  ),
                                                 ),
-                                              ),
-                                              const SizedBox(height: 8),
-                                              const Text(
-                                                'Series 7',
-                                                style: TextStyle(
-                                                  fontSize: 12,
-                                                  fontWeight: FontWeight.w500,
-                                                  color: Color(0xff9095A6),
+                                                const SizedBox(height: 8),
+                                                const Text(
+                                                  'Series 7',
+                                                  style: TextStyle(
+                                                    fontSize: 12,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: Color(0xff9095A6),
+                                                  ),
                                                 ),
-                                              ),
-                                              const SizedBox(height: 20),
-                                              const Text(
-                                                '\$ 799',
-                                                style: TextStyle(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.w500,
-                                                  color: Color(0xff5B41FF),
+                                                const SizedBox(height: 20),
+                                                const Text(
+                                                  '\$ 799',
+                                                  style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: Color(0xff5B41FF),
+                                                  ),
                                                 ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ),
